@@ -2,7 +2,7 @@ import test from 'ava';
 import { render } from 'enzyme';
 import React from 'react';
 
-import Book from '../Book.jsx';
+import Book from '../Book.js';
 
 test('should have a checked checkbox', (t) => {
   const book = render(<Book read={true} />);

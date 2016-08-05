@@ -62,7 +62,7 @@ Please note though that this addon is going to be deprecated in the future as it
 
 ## Challenge!
 
-Edit GuestList.jsx so that:
+Edit GuestList.js so that:
 
   1. `<label>`'s have a `for` attribute that matches the `id` that it refers to;
   2. The `<button>` to add guests has a `green` background color when `name` and `brings` are not empty. Use inline styles for that.

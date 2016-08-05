@@ -20,7 +20,7 @@ class BookForm extends React.Component {
     });
   }
   addBook() {
-    if (!this.state.title) {
+    if (!this.state.title) {
       return;
     }
 
@@ -67,6 +67,6 @@ class BookForm extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default BookForm;

@@ -27,7 +27,7 @@ class Book extends React.Component {
       </tr>
     );
   }
-};
+}
 
 // TODO propTypes
 

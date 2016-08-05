@@ -56,12 +56,12 @@ This is a great way for components to communicate with each other. Think of it a
 
 For this challenge to make more sense, you should execute the tasks in order.
 
-  1. Edit `BookForm.jsx` so that:
+  1. Edit `BookForm.js` so that:
     1. `changeTitle` has an implementation where the state is mutated to reflect the new value of `title` (Hint: event.target.value);
     2. `changeRead` has an implementation where the state is mutated to reflect the new value of `read`;
     3. `addBook` invokes `props.onBook` with the current book.
-  2. Edit `Book.jsx` so that `Book` has a method `toggleRead` that is invoked when the user clicks in the `<input>` checkbox;
-  3. Review the code (in `index.jsx`, `BookForm.jsx` and `Book.jsx`) and observe how the data flows between components.
+  2. Edit `Book.js` so that `Book` has a method `toggleRead` that is invoked when the user clicks in the `<input>` checkbox;
+  3. Review the code (in `index.js`, `BookForm.js` and `Book.js`) and observe how the data flows between components.
 
 ### Resources
 

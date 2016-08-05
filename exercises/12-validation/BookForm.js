@@ -9,7 +9,6 @@ class BookForm extends React.Component {
       read: false
     };
   }
-
   changeTitle(ev) {
     this.setState({
       title: ev.target.value
@@ -21,7 +20,7 @@ class BookForm extends React.Component {
     });
   }
   addBook() {
-    if (!this.state.title) {
+    if (!this.state.title) {
       return;
     }
 
@@ -69,7 +68,7 @@ class BookForm extends React.Component {
       </div>
     );
   }
-};
+}
 
 // TODO propTypes
 

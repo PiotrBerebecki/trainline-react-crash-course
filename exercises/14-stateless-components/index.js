@@ -1,7 +1,7 @@
 import React from 'react';
 
-import GuestList from './GuestList.jsx';
-import BirthdayInfo from './BirthdayInfo.jsx';
+import GuestList from './GuestList.js';
+import BirthdayInfo from './BirthdayInfo.js';
 
 class BirthdayContentPage extends React.Component {
   render() {
@@ -15,7 +15,7 @@ class BirthdayContentPage extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default class extends React.Component {
   render() {
@@ -36,4 +36,4 @@ export default class extends React.Component {
       />
     );
   }
-};
+}

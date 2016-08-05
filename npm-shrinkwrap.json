@@ -788,11 +788,6 @@
       "from": "buffer-shims@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/buffer-shims/-/buffer-shims-1.0.0.tgz"
     },
-    "build-array": {
-      "version": "1.0.0",
-      "from": "build-array@>=1.0.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/build-array/-/build-array-1.0.0.tgz"
-    },
     "builtin-modules": {
       "version": "1.1.1",
       "from": "builtin-modules@>=1.0.0 <2.0.0",
@@ -1137,11 +1132,6 @@
       "version": "4.0.0",
       "from": "cross-spawn@>=4.0.0 <5.0.0",
       "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-4.0.0.tgz"
-    },
-    "cross-spawn-async": {
-      "version": "2.2.4",
-      "from": "cross-spawn-async@>=2.0.0 <3.0.0",
-      "resolved": "https://registry.npmjs.org/cross-spawn-async/-/cross-spawn-async-2.2.4.tgz"
     },
     "cryptiles": {
       "version": "2.0.5",
@@ -3669,11 +3659,6 @@
       "from": "os-homedir@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/os-homedir/-/os-homedir-1.0.1.tgz"
     },
-    "os-shim": {
-      "version": "0.1.3",
-      "from": "os-shim@>=0.1.2 <0.2.0",
-      "resolved": "https://registry.npmjs.org/os-shim/-/os-shim-0.1.3.tgz"
-    },
     "os-tmpdir": {
       "version": "1.0.1",
       "from": "os-tmpdir@>=1.0.1 <2.0.0",
@@ -3698,11 +3683,6 @@
       "version": "2.3.3",
       "from": "package-json@>=2.0.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/package-json/-/package-json-2.3.3.tgz"
-    },
-    "pad": {
-      "version": "1.0.0",
-      "from": "pad@>=1.0.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/pad/-/pad-1.0.0.tgz"
     },
     "pako": {
       "version": "0.2.9",
@@ -4081,18 +4061,6 @@
       "version": "0.1.1",
       "from": "power-assert-renderers@>=0.1.0 <0.2.0",
       "resolved": "https://registry.npmjs.org/power-assert-renderers/-/power-assert-renderers-0.1.1.tgz"
-    },
-    "pre-commit": {
-      "version": "1.1.3",
-      "from": "pre-commit@1.1.3",
-      "resolved": "https://registry.npmjs.org/pre-commit/-/pre-commit-1.1.3.tgz",
-      "dependencies": {
-        "cross-spawn": {
-          "version": "2.0.1",
-          "from": "cross-spawn@>=2.0.0 <2.1.0",
-          "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-2.0.1.tgz"
-        }
-      }
     },
     "prelude-ls": {
       "version": "1.1.2",
@@ -4634,11 +4602,6 @@
         }
       }
     },
-    "spawn-sync": {
-      "version": "1.0.13",
-      "from": "spawn-sync@1.0.13",
-      "resolved": "https://registry.npmjs.org/spawn-sync/-/spawn-sync-1.0.13.tgz"
-    },
     "spdx-correct": {
       "version": "1.0.2",
       "from": "spdx-correct@>=1.0.0 <1.1.0",
@@ -4948,11 +4911,6 @@
       "version": "0.3.2",
       "from": "type-check@>=0.3.2 <0.4.0",
       "resolved": "https://registry.npmjs.org/type-check/-/type-check-0.3.2.tgz"
-    },
-    "type-component": {
-      "version": "0.0.1",
-      "from": "type-component@0.0.1",
-      "resolved": "https://registry.npmjs.org/type-component/-/type-component-0.0.1.tgz"
     },
     "type-is": {
       "version": "1.6.13",

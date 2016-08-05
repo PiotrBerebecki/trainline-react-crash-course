@@ -1,10 +1,11 @@
 import React from 'react';
 
 class HiddenMessage extends React.Component {
-  constructor(){
+  constructor() {
     super();
-    this.state = {}
+
     // TODO implement this.state
+    this.state = {};
   }
   onClick(ev) {
     // TODO set a new state
@@ -12,7 +13,8 @@ class HiddenMessage extends React.Component {
     // TODO collapsed should be toggled
   }
   render() {
-    console.log(this.state)
+    console.log(this.state);
+
     let style = {
       display: this.state.collapsed ? 'none' : 'block'
     };
@@ -32,6 +34,6 @@ class HiddenMessage extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default HiddenMessage;

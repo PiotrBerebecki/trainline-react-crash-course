@@ -1,6 +1,6 @@
 import React from 'react';
-import BookForm from './BookForm.jsx';
-import Book from './Book.jsx';
+import BookForm from './BookForm.js';
+import Book from './Book.js';
 
 class Books extends React.Component {
   constructor(props) {
@@ -49,6 +49,6 @@ class Books extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default Books;

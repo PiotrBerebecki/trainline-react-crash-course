@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Guest from './Guest.jsx';
+import Guest from './Guest.js';
 
 class GuestList extends React.Component {
   constructor(props) {
@@ -42,10 +42,10 @@ class GuestList extends React.Component {
       guestBrings: ''
     });
   }
-  removeGuest(name){
+  removeGuest(name) {
     this.setState({
       guestList: this.state.guestList.filter(function(guest) {
-        return guest.name != name;
+        return guest.name !== name;
       })
     });
   }
@@ -112,6 +112,6 @@ class GuestList extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default GuestList;

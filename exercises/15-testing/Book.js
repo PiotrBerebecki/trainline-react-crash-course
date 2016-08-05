@@ -8,7 +8,6 @@ class Book extends React.Component {
       read: this.props.read
     };
   }
-
   toggleRead() {
     this.setState({
       read: !this.state.read
@@ -28,6 +27,6 @@ class Book extends React.Component {
       </tr>
     );
   }
-};
+}
 
 export default Book;

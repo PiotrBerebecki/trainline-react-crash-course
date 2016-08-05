@@ -48,7 +48,7 @@ class Anchor extends React.Component {
 
 ## Challenge!
 
- 1. Create your first component (`HelloWorld`); (index.jsx)
+ 1. Create your first component (`HelloWorld`); (index.js)
  2. Have that component render an `h1` tag with the text "Hello YLD";
 
 ### Resources

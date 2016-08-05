@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import buildArray from 'build-array';
-import pad from 'pad';
 
 import * as bootstrap from 'bootstrap-webpack';
 import * as styles from './style.css';
@@ -20,7 +18,7 @@ class ExerciseList extends React.Component {
 
     return (<ul>{links}</ul>);
   }
-};
+}
 
 class Header extends React.Component {
   constructor(props) {
@@ -54,14 +52,14 @@ class Header extends React.Component {
       </div>
     );
   }
-};
+}
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
     let ex = this.props.ex;
     this.state = {
-      component: ex ? require('./' + ex.slug + '/index.jsx') : ExerciseList,
+      component: ex ? require('./' + ex.slug + '/index.js') : ExerciseList,
       title: ex ? ex.title : 'Select your exercice:'
     };
   }
@@ -101,7 +99,7 @@ class Main extends React.Component {
       </div>
     );
   }
-};
+}
 
 class Instructions extends React.Component {
   constructor(props) {
@@ -130,13 +128,13 @@ class Instructions extends React.Component {
       </div>
     );
   }
-};
+}
 
 class Page extends React.Component {
   render() {
     let ex = this.props.ex;
     let key = ex ? ex.slug : 'main';
-    //console.log('rendering page');
+    // console.log('rendering page');
 
     return (
       <div>
@@ -147,10 +145,10 @@ class Page extends React.Component {
       </div>
     );
   }
-};
+}
 
 let onHashChange = function() {
-  let hash = window.location.hash.replace(/^\#/, '');
+  let hash = window.location.hash.replace(/^#/, '');
   let ex = exercises[hash];
   ReactDOM.render((<Page ex={ex} />), document.getElementById('root'));
 };

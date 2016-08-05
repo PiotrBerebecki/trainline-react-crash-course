@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Guest from './Guest.jsx';
+import Guest from './Guest.js';
 
 class GuestList extends React.Component {
   constructor(props) {
@@ -34,10 +34,10 @@ class GuestList extends React.Component {
       guestBrings: ''
     });
   }
-  removeGuest(name){
+  removeGuest(name) {
     this.setState({
       guestList: this.state.guestList.filter(function(guest) {
-        return guest.name != name;
+        return guest.name !== name;
       })
     });
   }
@@ -58,14 +58,33 @@ class GuestList extends React.Component {
         <div>
           <div className='form-group'>
             <label>Name</label>
-            <input value={this.state.guestName} onChange={this.changeName.bind(this)} placeholder='Name' type='text' className='form-control' id='name' />
+            <input
+              value={this.state.guestName}
+              onChange={this.changeName.bind(this)}
+              placeholder='Name'
+              type='text'
+              className='form-control'
+              id='name'
+            />
           </div>
           <div className='form-group'>
             <label>Brings</label>
-            <input value={this.state.guestBrings} onChange={this.changeBrings.bind(this)} placeholder='Brings' type='text' className='form-control' id='brings' />
+            <input
+              value={this.state.guestBrings}
+              onChange={this.changeBrings.bind(this)}
+              placeholder='Brings'
+              type='text'
+              className='form-control'
+              id='brings'
+            />
           </div>
           <div className='form-group'>
-            <button className='btn btn-default' onClick={this.addGuest.bind(this)}>Add</button>
+            <button
+              className='btn btn-default'
+              onClick={this.addGuest.bind(this)}
+            >
+              Add
+            </button>
           </div>
         </div>
         <table className='table table-condensed'>
@@ -76,11 +95,13 @@ class GuestList extends React.Component {
                <th></th>
             </tr>
           </thead>
-          <tbody>{guests}</tbody>
+          <tbody>
+            {guests}
+          </tbody>
         </table>
       </div>
     );
   }
-};
+}
 
 export default GuestList;

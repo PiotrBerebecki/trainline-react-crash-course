@@ -8,7 +8,7 @@ module.exports = {
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
     'webpack-hot-middleware/client',
-    './index.jsx'
+    './index.js'
   ],
   output: {
     path: path.join(__dirname, 'static'),
@@ -26,7 +26,7 @@ module.exports = {
   ],
   module: {
     loaders: [{
-      test: /\.jsx?$/,
+      test: /\js?$/,
       exclude: /node_modules/,
       loaders: ['babel']
     }, {

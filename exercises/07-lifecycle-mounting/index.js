@@ -19,6 +19,6 @@ class Count extends React.Component {
       <h1>The count is: {this.state.count}</h1>
     );
   }
-};
+}
 
 export default Count;

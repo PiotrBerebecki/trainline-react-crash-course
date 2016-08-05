@@ -22,6 +22,6 @@ class Book extends React.Component {
       </tr>
     );
   }
-};
+}
 
 export default Book;

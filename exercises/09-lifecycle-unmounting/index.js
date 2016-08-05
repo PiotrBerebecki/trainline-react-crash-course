@@ -25,7 +25,7 @@ class Display extends React.Component {
       </span>
     );
   }
-};
+}
 
 export default class extends React.Component {
   constructor(props) {
@@ -56,4 +56,4 @@ export default class extends React.Component {
       <div>{display}</div>
     );
   }
-};
+}

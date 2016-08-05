@@ -1,7 +1,7 @@
 import React from 'react';
 
 class Guest extends React.Component {
-  onRemoveClick () {
+  onRemoveClick() {
     this.props.onRemove(this.props.name);
   }
   render() {
@@ -21,7 +21,7 @@ class Guest extends React.Component {
       </tr>
     );
   }
-};
+}
 
 Guest.propTypes = {
   href: React.PropTypes.string.isRequired,

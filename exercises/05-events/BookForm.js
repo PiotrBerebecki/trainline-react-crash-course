@@ -57,6 +57,6 @@ class BookForm extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default BookForm;

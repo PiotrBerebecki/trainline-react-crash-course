@@ -11,7 +11,7 @@ class User extends React.Component {
     };
   }
   changeName() {
-    //TODO
+    // TODO
   }
   render() {
     return (
@@ -39,6 +39,6 @@ class User extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default User;
