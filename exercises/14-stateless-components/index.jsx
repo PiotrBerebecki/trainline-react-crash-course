@@ -9,7 +9,9 @@ class BirthdayContentPage extends React.Component {
       <div>
         <h1>Birthday Party</h1>
         <BirthdayInfo/>
-        <GuestList guestList={this.props.guestList} />
+        <GuestList
+          guestList={this.props.guestList}
+        />
       </div>
     );
   }
@@ -28,6 +30,10 @@ export default class extends React.Component {
       brings: 'Beer'
     }];
 
-    return (<BirthdayContentPage guestList={guestList} />)
+    return (
+      <BirthdayContentPage
+        guestList={guestList}
+      />
+    );
   }
 };

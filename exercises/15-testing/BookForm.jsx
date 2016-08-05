@@ -3,6 +3,7 @@ import React from 'react';
 class BookForm extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       title: '',
       read: false
@@ -32,20 +33,39 @@ class BookForm extends React.Component {
     });
   }
   render() {
-    return (<div>
-      <div className='form-group'>
-        <label htmlFor='title'>Title</label>
-        <input value={this.state.title} onChange={this.changeTitle.bind(this)} type='text' className='form-control' id='title' />
+    return (
+      <div>
+        <div className='form-group'>
+          <label htmlFor='title'>Title</label>
+          <input
+            value={this.state.title}
+            onChange={this.changeTitle.bind(this)}
+            type='text'
+            className='form-control'
+            id='title'
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor='read'>
+            <span>Read: </span>
+            <input
+              checked={this.state.read}
+              onChange={this.changeRead.bind(this)}
+              type='checkbox'
+              id='read'
+            />
+          </label>
+        </div>
+        <div className='form-group'>
+          <button
+            className='btn btn-default'
+            onClick={this.addBook.bind(this)}
+          >
+            Add Book
+          </button>
+        </div>
       </div>
-      <div className="form-group">
-        <label htmlFor='read'>
-          <span>Read: </span><input checked={this.state.read} onChange={this.changeRead.bind(this)} type='checkbox' id='read' />
-        </label>
-      </div>
-      <div className='form-group'>
-        <button className='btn btn-default' onClick={this.addBook.bind(this)}>Add Book</button>
-      </div>
-    </div>);
+    );
   }
 };
 

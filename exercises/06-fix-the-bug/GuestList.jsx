@@ -43,34 +43,43 @@ class GuestList extends React.Component {
   }
   render() {
     let guests = this.props.guestList.map(function(guest) {
-      return (<Guest name={guest.name} key={guest.name} onRemove={this.removeGuest.bind(this)}>{guest.brings}</Guest>);
+      return (
+        <Guest
+          name={guest.name}
+          key={guest.name}
+          onRemove={this.removeGuest.bind(this)}>
+            {guest.brings}
+        </Guest>
+      );
     }, this);
 
-    return (<div>
+    return (
       <div>
-        <div className='form-group'>
-          <label>Name</label>
-          <input value={this.state.guestName} onChange={this.changeName.bind(this)} placeholder='Name' type='text' className='form-control' id='name' />
+        <div>
+          <div className='form-group'>
+            <label>Name</label>
+            <input value={this.state.guestName} onChange={this.changeName.bind(this)} placeholder='Name' type='text' className='form-control' id='name' />
+          </div>
+          <div className='form-group'>
+            <label>Brings</label>
+            <input value={this.state.guestBrings} onChange={this.changeBrings.bind(this)} placeholder='Brings' type='text' className='form-control' id='brings' />
+          </div>
+          <div className='form-group'>
+            <button className='btn btn-default' onClick={this.addGuest.bind(this)}>Add</button>
+          </div>
         </div>
-        <div className='form-group'>
-          <label>Brings</label>
-          <input value={this.state.guestBrings} onChange={this.changeBrings.bind(this)} placeholder='Brings' type='text' className='form-control' id='brings' />
-        </div>
-        <div className='form-group'>
-          <button className='btn btn-default' onClick={this.addGuest.bind(this)}>Add</button>
-        </div>
+        <table className='table table-condensed'>
+          <thead>
+            <tr>
+               <th>Name</th>
+               <th>Brings</th>
+               <th></th>
+            </tr>
+          </thead>
+          <tbody>{guests}</tbody>
+        </table>
       </div>
-      <table className='table table-condensed'>
-        <thead>
-          <tr>
-             <th>Name</th>
-             <th>Brings</th>
-             <th></th>
-          </tr>
-        </thead>
-        <tbody>{guests}</tbody>
-      </table>
-    </div>);
+    );
   }
 };
 

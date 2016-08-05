@@ -3,6 +3,7 @@ import React from 'react';
 class Book extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       read: this.props.read
     };
@@ -13,10 +14,18 @@ class Book extends React.Component {
     });
   }
   render() {
-    return (<tr>
-      <td>{this.props.title}</td>
-      <td><input type='checkbox' checked={this.state.read} onChange={this.toggleRead.bind(this)}/></td>
-    </tr>);
+    return (
+      <tr>
+        <td>{this.props.title}</td>
+        <td>
+          <input
+            type='checkbox'
+            checked={this.state.read}
+            onChange={this.toggleRead.bind(this)}
+          />
+        </td>
+      </tr>
+    );
   }
 };
 

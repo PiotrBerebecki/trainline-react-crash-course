@@ -22,7 +22,12 @@ class Books extends React.Component {
   }
   render() {
     let books = this.state.books.map(function(book) {
-      return (<Book title={book.title} read={book.read} />);
+      return (
+        <Book
+          title={book.title}
+          read={book.read}
+        />
+      );
     });
 
     return (

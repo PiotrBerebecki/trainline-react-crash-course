@@ -28,6 +28,10 @@ export default class extends React.Component {
       brings: 'Beer'
     }];
 
-    return (<BirthdayContentPage guestList={guestList} />)
+    return (
+      <BirthdayContentPage
+        guestList={guestList}
+      />
+    );
   }
 };

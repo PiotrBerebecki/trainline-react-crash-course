@@ -3,7 +3,7 @@ import React from 'react';
 class Book extends React.Component {
   render() {
     return (<div>
-      // TODO use the properties to render the name of the book and the read status
+      {/* TODO use the properties to render the name of the book and the read status */}
     </div>);
   }
 };
@@ -17,10 +17,14 @@ class Library extends React.Component {
     let read = true;
     let title = 'Professional Node.js: Building Javascript Based Scalable Software';
 
-    return (<ul>
-      <li><Book /></li> // don't declare any attributes here
-      <li><Book  /></li> // TODO pass the title and read values to Book by using the Book tag attributes
-    </ul>);
+    return (
+      <ul>
+        {/* don't declare any attributes here */}
+        <li><Book /></li>
+        {/* TODO pass the title and read values to Book by using the Book tag attributes */}
+        <li><Book  /></li>
+      </ul>
+    );
   }
 };
 

@@ -9,20 +9,23 @@ class Display extends React.Component {
       showColon: true
     };
   }
-
   // TODO componentWillReceiveProps
   // TODO shouldComponentUpdate
   render() {
     let colon = this.state.showColon ? ':' : ' ';
-    return (<span>
-      {this.props.s}{colon}{this.props.ms}
-    </span>);
+
+    return (
+      <span>
+        {this.props.s}{colon}{this.props.ms}
+      </span>
+    );
   }
 };
 
 export default class extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       s: 0,
       ms: 0,
@@ -32,6 +35,7 @@ export default class extends React.Component {
 
   tick() {
     let diff = timediff(this.state.start, new Date());
+
     this.setState({
       ms: diff.milliseconds,
       s: diff.seconds
@@ -50,10 +54,12 @@ export default class extends React.Component {
     });
   }
   render() {
-    return (<div>
-      <span>Elapsed time: </span><Display s={this.state.s} ms={this.state.ms} />
-      <br />
-      <button onClick={this.reset.bind(this)}>Reset</button>
-    </div>);
+    return (
+      <div>
+        <span>Elapsed time: </span><Display s={this.state.s} ms={this.state.ms} />
+        <br />
+        <button onClick={this.reset.bind(this)}>Reset</button>
+      </div>
+    );
   }
 };
