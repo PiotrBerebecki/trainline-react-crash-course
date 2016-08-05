@@ -13,5 +13,6 @@
         "react-hmre"
       ]
     }
-  }
+  },
+  "sourceMaps": "both"
 }

@@ -6,7 +6,7 @@ var fs = require('fs');
 
 var config = require('./webpack.config.js');
 
-/******************************************************************************/
+/**                                                                          **/
 
 var exercises = fs.readdirSync(path.join(__dirname, 'exercises'))
 .filter(function(ex) {
@@ -40,7 +40,7 @@ var str = JSON.stringify(exercises, null, 2);
 var filename = path.join(__dirname, 'exercises/.exercises.json');
 fs.writeFileSync(filename, str, 'utf-8');
 
-/******************************************************************************/
+/**                                                                          **/
 
 var app = express();
 var compiler = webpack(config);
@@ -64,5 +64,3 @@ app.listen(3000, 'localhost', function(err) {
 
   console.log('Listening at http://localhost:3000');
 });
-
-
