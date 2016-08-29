@@ -34,4 +34,4 @@ Much like the node.js concept of having tiny modules that compose on each-other 
 
 ## Challenge!
 
- * Edit index.jsx, GuestList.jsx, Guest.jsx, BirthdayInfo.jsx so that every component that can be a stateless component, is a stateless component.
+ * Edit index.js, GuestList.js, Guest.js, BirthdayInfo.js so that every component that can be a stateless component, is a stateless component.

@@ -8,7 +8,7 @@ module.exports = {
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
     'webpack-hot-middleware/client',
-    './index.jsx'
+    './index.js'
   ],
   output: {
     path: path.join(__dirname, 'static'),
@@ -17,11 +17,16 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery',
+      'window.jQuery': 'jquery'
+    })
   ],
   module: {
     loaders: [{
-      test: /\.jsx?$/,
+      test: /js?$/,
       exclude: /node_modules/,
       loaders: ['babel']
     }, {
@@ -34,15 +39,10 @@ module.exports = {
     }, {
       test: /\.css$/,
       loaders: ['style', 'css']
-    },
-    // **IMPORTANT** This is needed so that each bootstrap js file required by
-    // bootstrap-webpack has access to the jQuery object
-    {
+    }, {
       test: /bootstrap\/js\//,
       loader: 'imports?jQuery=jquery'
-    },
-    // Needed for the css-loader when bootstrap-webpack loads bootstrap's css.
-    {
+    }, {
       test: /\.woff\d?(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=application/font-woff'
     }, {

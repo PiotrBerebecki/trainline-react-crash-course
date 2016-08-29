@@ -1,10 +1,10 @@
 import React from 'react';
-import BookForm from './BookForm.jsx';
-import Book from './Book.jsx';
+import BookForm from './BookForm.js';
+import Book from './Book.js';
 
 class Books extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       books: [{
         title: 'Professional Node.js',
@@ -12,6 +12,7 @@ class Books extends React.Component {
       }]
     };
   }
+
   onBook(book) {
     this.state.books.push(book);
 
@@ -21,7 +22,12 @@ class Books extends React.Component {
   }
   render() {
     let books = this.state.books.map(function(book) {
-      return (<Book title={book.title} read={book.read} />);
+      return (
+        <Book
+          title={book.title}
+          read={book.read}
+        />
+      );
     });
 
     return (
@@ -39,6 +45,6 @@ class Books extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default Books;

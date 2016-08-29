@@ -1,10 +1,11 @@
 import React from 'react';
 
 class HiddenMessage extends React.Component {
-  constructor(){
+  constructor() {
     super();
-    this.state = {}
+
     // TODO implement this.state
+    this.state = {};
   }
   onClick(ev) {
     // TODO set a new state
@@ -12,16 +13,27 @@ class HiddenMessage extends React.Component {
     // TODO collapsed should be toggled
   }
   render() {
-    console.log(this.state)
+    console.log(this.state);
+
     let style = {
       display: this.state.collapsed ? 'none' : 'block'
     };
 
-    return (<div>
-      <button type='button' onClick={this.onClick.bind(this)} className='btn btn-default'>{this.state.label}</button>
-      <div className='well' style={style}>{this.state.msg}</div>
-    </div>);
+    return (
+      <div>
+        <button
+          type='button'
+          onClick={this.onClick.bind(this)}
+          className='btn btn-default'
+        >
+          {this.state.label}
+        </button>
+        <div className='well' style={style}>
+          {this.state.msg}
+        </div>
+      </div>
+    );
   }
-};
+}
 
 export default HiddenMessage;

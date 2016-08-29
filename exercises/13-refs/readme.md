@@ -65,7 +65,7 @@ Note that references could also be useful if you need to call other component fu
 
 ## Challenge!
 
-Edit index.jsx so that:
+Edit index.js so that:
   1. `changeName` event handler is shared between `first` and `last` `<input>`s;
   2. `first` and `last` `<input>`s have a `ref` attribute;
 

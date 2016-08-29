@@ -10,11 +10,18 @@ class Book extends React.Component {
   render() {
     return (
       <tr>
-        <td>{this.props.title}</td>
-        <td><input type='checkbox' checked={this.state.read} /></td>
+        <td>
+          {this.props.title}
+        </td>
+        <td>
+          <input
+            type='checkbox'
+            checked={this.state.read}
+          />
+        </td>
       </tr>
     );
   }
-};
+}
 
 export default Book;

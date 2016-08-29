@@ -61,7 +61,7 @@ Given an initial state:
 }
 ```
 
-Edit index.jsx so that:
+Edit index.js so that:
 
   1. `HiddenMessage` has a initial state;
   3. the implementation of `onClick` mutates the current `state` in a way that:

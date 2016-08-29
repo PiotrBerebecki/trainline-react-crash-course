@@ -28,7 +28,7 @@ Notice how `Anchor` has access to `this.props.href`.
 
 ## Challenge!
 
-In your index.jsx you have a `Book` and a `Library` component. Edit them so that:
+In your index.js you have a `Book` and a `Library` component. Edit them so that:
   1. `Book` has a `title` and `read` default properties. The `title` can be an empty string and `read` can be `false`;
   2. `Book.render` uses `this.props` to render a `<p>` with the `title` and a checkbox `<input>` with the `read` status;
   3. `Library` uses the `Book` tag attributes to pass the `title` and `read` values to it.

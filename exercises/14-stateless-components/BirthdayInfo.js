@@ -9,6 +9,6 @@ class BirthdayInfo extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default BirthdayInfo;
