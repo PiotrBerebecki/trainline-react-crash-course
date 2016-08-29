@@ -1,23 +1,5 @@
 ## Intro
 
-To listen to events in your DOM element, you just need to pass a function to them:
-
-```javascript
-class Anchor extends React.Component {
-  constructor() {
-    super();
-  }
-  onClick(ev) {
-    console.log(ev);
-  }
-  render() {
-    return (<a onClick={this.onClick.bind(this)}></a>);
-  }
-};
-```
-
-React has support for a bunch of DOM events. You can check them in the [React documentation](https://facebook.github.io/react/docs/events.html)
-
 Because any type of variable can be used in the `props` of a component, you can use this pattern to communicate between Components:
 
 ```javascript
