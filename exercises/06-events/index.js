@@ -21,7 +21,7 @@ class Books extends React.Component {
     });
   }
   render() {
-    let books = this.state.books.map(function(book) {
+    const books = this.state.books.map(function(book) {
       return (
         <Book
           title={book.title}

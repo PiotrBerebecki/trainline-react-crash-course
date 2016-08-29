@@ -46,7 +46,7 @@ export default class extends React.Component {
     setInterval(this.tick.bind(this), 1000);
   }
   render() {
-    let display = this.state.show ? (
+    const display = this.state.show ? (
       <Display
         count={this.state.count}
       />

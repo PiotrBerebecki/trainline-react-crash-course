@@ -17,7 +17,7 @@ class BirthdayContentPage extends React.Component {
 
 export default class extends React.Component {
   render() {
-    let guestList = [{
+    const guestList = [{
       name: 'First Person',
       brings: 'Champanhe'
     }, {

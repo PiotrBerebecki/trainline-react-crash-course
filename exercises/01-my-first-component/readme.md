@@ -23,7 +23,7 @@ You might find this syntax odd: we are mixing HTML with Javascript.
 React supports ES2015 (as shown in the previous example), but you can write code in the good old ES5:
 
 ```js
-var Achor = React.createClass({
+const Achor = React.createClass({
   render: function() {
     return (<a href='http://yld.io/'></a>);
   }

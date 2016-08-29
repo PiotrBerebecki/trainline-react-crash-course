@@ -54,8 +54,8 @@ Having those references, you can use them to get the properties of DOMNodes:
 class Checkboxes extends React.Component {
   ...,
   toggle() {
-    let es6 = this._es6;
-    let isES6Checked = es6.props.checked;
+    const es6 = this._es6;
+    const isES6Checked = es6.props.checked;
   }
   ...
 };

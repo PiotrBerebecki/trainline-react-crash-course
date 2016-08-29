@@ -15,7 +15,7 @@ For instance:
 ```js
 class MyStyle extends React.Component {
   render() {
-    let divStyle = {
+    const divStyle = {
       color: 'white',
       backgroundColor: 'black',
       width: 100
@@ -41,7 +41,7 @@ If you want to go the inline styles route, we would advise you to use an externa
 In one of the previous examples (exercise 04), you may remember seeing a snippet of code like this:
 
 ```js
-let classNames = [
+const classNames = [
   'alert',
   'alert-' + this.props.type,
   'alert-dismissible'
@@ -51,7 +51,7 @@ let classNames = [
 Managing dynamic class names like this can get annoying and significantly increases the clutter in the code. To prevent that you can use `React.addons.classSet` to conditionally toggle class names:
 
 ```js
-let classNames = React.addons.classSet({
+const classNames = React.addons.classSet({
   'alert': true,
   'alert-info': this.props.type === 'info',
   'alert-dismissible': true

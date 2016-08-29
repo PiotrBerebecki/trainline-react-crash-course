@@ -1,17 +1,18 @@
-var webpack = require('webpack');
-var path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   debug: true,
-  devtool: 'cheap-module-eval-source-map',
-  context: path.join(__dirname, 'exercises'),
+  devtool: 'eval',
+  context: path.join(__dirname, '../client'),
   entry: [
-    'eventsource-polyfill', // necessary for hot reloading with IE
-    'webpack-hot-middleware/client',
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    'react-hot-loader/patch',
     './index.js'
   ],
   output: {
-    path: path.join(__dirname, 'static'),
+    path: path.join(__dirname, '../../static'),
     publicPath: '/static/',
     filename: 'bundle.js'
   },
@@ -28,16 +29,32 @@ module.exports = {
     loaders: [{
       test: /js?$/,
       exclude: /node_modules/,
+      include: [
+        path.join(__dirname, '../client'),
+        path.join(__dirname, '../../exercises')
+      ],
       loaders: ['babel']
     }, {
       test: /\.json?$/,
       exclude: /node_modules/,
+      include: [
+        path.join(__dirname, '../client'),
+        path.join(__dirname, '../../exercises')
+      ],
       loaders: ['json']
     }, {
       test: /\.md$/,
+      include: [
+        path.join(__dirname, '../client'),
+        path.join(__dirname, '../../exercises')
+      ],
       loaders: ['html', 'remarkable']
     }, {
       test: /\.css$/,
+      include: [
+        path.join(__dirname, '../client'),
+        path.join(__dirname, '../../exercises')
+      ],
       loaders: ['style', 'css']
     }, {
       test: /bootstrap\/js\//,

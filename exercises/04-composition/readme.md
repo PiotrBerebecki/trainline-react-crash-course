@@ -8,12 +8,12 @@ React has a very strong emphasis on composition. You use components to form comp
 
 To distinguish between native DOM elements and React elements, there is a rule that all non-native elements names must be PascalCase.
 
-Let's exemplify this by having an `Alert` component that will be used by other component (`App`):
+const's exemplify this by having an `Alert` component that will be used by other component (`App`):
 
 ```js
 class Alert extends React.Component {
   render() {
-    let classNames = [
+    const classNames = [
       'alert',
       'alert-' + this.props.type,
       'alert-dismissible'
@@ -40,7 +40,7 @@ You see how we are instantiating `Alert` twice in `App.render`? Because JSX is t
 ```js
 class App extends React.Component {
   render() {
-    let alerts = [{
+    const alerts = [{
       type: 'info',
       msg: 'Is this going to work?'
     }, {
@@ -48,7 +48,7 @@ class App extends React.Component {
       msg: 'Well done!'
     }];
 
-    let tags = [];
+    const tags = [];
 
     for (i in alerts) {
       tags[i] = (<Alert type={alerts[i].type} msg={alerts[i].msg} />);
@@ -64,7 +64,7 @@ But we can make it even cleaner and better by using some functional ideas like m
 ```js
 class App extends React.Component {
   render() {
-    let alerts = [{
+    const alerts = [{
       type: 'info',
       msg: 'Is this going to work?'
     }, {
@@ -72,7 +72,7 @@ class App extends React.Component {
       msg: 'Well done!'
     }];
 
-    let tags = alerts.map(function(alert) {
+    const tags = alerts.map(function(alert) {
       return (<Alert type={alert.type} msg={alert.msg} />);
     });
 

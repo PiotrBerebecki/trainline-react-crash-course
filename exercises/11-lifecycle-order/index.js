@@ -50,7 +50,7 @@ export default class extends React.Component {
     setInterval(this.tock.bind(this), 500);
   }
   render() {
-    let display = this.state.show ? (
+    const display = this.state.show ? (
       <Display
         count={this.state.count}
       />

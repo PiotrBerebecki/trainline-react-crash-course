@@ -12,7 +12,7 @@ class Display extends React.Component {
   // TODO componentWillReceiveProps
   // TODO shouldComponentUpdate
   render() {
-    let colon = this.state.showColon ? ':' : ' ';
+    const colon = this.state.showColon ? ':' : ' ';
 
     return (
       <span>
@@ -34,7 +34,7 @@ export default class extends React.Component {
   }
 
   tick() {
-    let diff = timediff(this.state.start, new Date());
+    const diff = timediff(this.state.start, new Date());
 
     this.setState({
       ms: diff.milliseconds,

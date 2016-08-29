@@ -7,7 +7,7 @@ At specific points of a component's lifecycle, various methods can be specified 
 Component instances can live even after you create render them again with new properties. Let's see an example:
 
 ```js
-let links = [
+const links = [
   'http://www.yld.io',
   'http://blog.yld.io'
 ];

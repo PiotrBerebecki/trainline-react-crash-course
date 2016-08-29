@@ -15,7 +15,7 @@ class HiddenMessage extends React.Component {
   render() {
     console.log(this.state);
 
-    let style = {
+    const style = {
       display: this.state.collapsed ? 'none' : 'block'
     };
 
