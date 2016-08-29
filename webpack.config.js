@@ -39,15 +39,10 @@ module.exports = {
     }, {
       test: /\.css$/,
       loaders: ['style', 'css']
-    },
-    // **IMPORTANT** This is needed so that each bootstrap js file required by
-    // bootstrap-webpack has access to the jQuery object
-    {
+    }, {
       test: /bootstrap\/js\//,
       loader: 'imports?jQuery=jquery'
-    },
-    // Needed for the css-loader when bootstrap-webpack loads bootstrap's css.
-    {
+    }, {
       test: /\.woff\d?(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'url?limit=10000&mimetype=application/font-woff'
     }, {
