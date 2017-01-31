@@ -3,7 +3,7 @@
 ## 1. Install the dependencies
 
 ```bash
-$ npm install
+$ yarn install
 ```
 
 ## 2. Start the server
