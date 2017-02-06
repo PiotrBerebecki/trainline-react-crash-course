@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  debug: true,
   devtool: 'eval',
   context: path.join(__dirname, '../client'),
   entry: [
@@ -18,7 +17,6 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery',
@@ -26,51 +24,49 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [{
+    rules: [{
       test: /js?$/,
       exclude: /node_modules/,
       include: [
         path.join(__dirname, '../client'),
         path.join(__dirname, '../../exercises')
       ],
-      loaders: ['babel']
-    }, {
-      test: /\.json?$/,
-      exclude: /node_modules/,
-      include: [
-        path.join(__dirname, '../client'),
-        path.join(__dirname, '../../exercises')
-      ],
-      loaders: ['json']
+      use: ['babel-loader']
     }, {
       test: /\.md$/,
       include: [
         path.join(__dirname, '../client'),
         path.join(__dirname, '../../exercises')
       ],
-      loaders: ['html', 'remarkable']
+      use: [
+        'html-loader',
+        'remarkable-loader'
+      ]
     }, {
       test: /\.css$/,
       include: [
         path.join(__dirname, '../client'),
         path.join(__dirname, '../../exercises')
       ],
-      loaders: ['style', 'css']
+      use: [
+        'style-loader',
+        'css-loader'
+      ]
     }, {
       test: /bootstrap\/js\//,
-      loader: 'imports?jQuery=jquery'
+      use: ['imports-loader?jQuery=jquery']
     }, {
       test: /\.woff\d?(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=application/font-woff'
+      use: ['url-loader?limit=10000&mimetype=application/font-woff']
     }, {
       test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=application/octet-stream'
+      use: ['url-loader?limit=10000&mimetype=application/octet-stream']
     }, {
       test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file'
+      use: ['file-loader']
     }, {
       test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url?limit=10000&mimetype=image/svg+xml'
+      use: ['url-loader?limit=10000&mimetype=image/svg+xml']
     }]
   }
 };

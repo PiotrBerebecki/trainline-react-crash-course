@@ -26,7 +26,7 @@ const Header = ({
           {back}
           <img
             className='logo'
-            src={require('file!../../images/yld.png')}
+            src={require('file-loader!../../images/yld.png')}
             alt='YLD' />
           <h1>
             {_title}

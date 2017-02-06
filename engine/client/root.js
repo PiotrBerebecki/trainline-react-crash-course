@@ -1,4 +1,5 @@
-require('bootstrap-webpack');
+require('bootstrap-loader');
+
 require('./github.css');
 require('./style.css');
 
