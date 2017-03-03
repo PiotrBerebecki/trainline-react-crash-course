@@ -18,13 +18,22 @@ class Page extends React.Component {
   }
   getNewState() {
     const index = window.location.hash.replace(/^#/, '');
+    const isMain = (index.length && exercises[index]);
 
-    return (index.length && exercises[index]) ? exercises[index] : {
+    const dflt = {
       index: null,
       title: '',
       files: [],
       slug: 'main'
     };
+
+    const newState = isMain
+      ? exercises[index]
+      : dflt;
+
+    newState.size = Object.keys(exercises).length;
+
+    return newState;
   }
   componentWillMount() {
     window.addEventListener('hashchange', this.refresh, false);
