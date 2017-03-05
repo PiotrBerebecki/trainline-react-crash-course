@@ -7,7 +7,7 @@ class List extends React.Component {
   }
 }
 
-class Topics extends React.Component {
+class Topic extends React.Component {
   // TODO write your component here
   render() {
     return null;
