@@ -25,7 +25,7 @@ module.exports = {
   ],
   module: {
     rules: [{
-      test: /js?$/,
+      test: /\.js?$/,
       exclude: /node_modules/,
       include: [
         path.join(__dirname, '../client'),
@@ -43,18 +43,21 @@ module.exports = {
         'remarkable-loader'
       ]
     }, {
-      test: /\.css$/,
+      test: /\.(css|styl)$/,
       include: [
         path.join(__dirname, '../client'),
         path.join(__dirname, '../../exercises')
       ],
       use: [
         'style-loader',
-        'css-loader'
+        'css-loader',
+        {
+          loader: 'stylus-loader',
+          options: {
+            use: [require('bootstrap-styl')()]
+          }
+        }
       ]
-    }, {
-      test: /bootstrap\/js\//,
-      use: ['imports-loader?jQuery=jquery']
     }, {
       test: /\.woff\d?(\?v=\d+\.\d+\.\d+)?$/,
       use: ['url-loader?limit=10000&mimetype=application/font-woff']

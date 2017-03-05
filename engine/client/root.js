@@ -1,6 +1,5 @@
-require('bootstrap-loader');
-
 require('./github.css');
+require('./bootstrap.styl');
 require('./style.css');
 
 const React = require('react');
