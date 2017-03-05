@@ -99,7 +99,7 @@ const Result = React.createClass({
   },
   componentWillReceiveProps: function(nextProps) {
     // reset state and get new one
-    this.setState(Objct.assign({
+    this.setState(Object.assign({
       validating: false,
       error: false,
       compiling: false,
