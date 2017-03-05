@@ -26,4 +26,5 @@ How to use it:
 
 ### Resources
  * [YLD blogpost about Component Profiling](https://blog.yld.io/2016/11/25/react-component-profiling/)
- * [v15.4.0 Release Notes](https://facebook.github.io/react/blog/2016/11/16/react-v15.4.0.html_
+ * [v15.4.0 Release Notes](https://facebook.github.io/react/blog/2016/11/16/react-v15.4.0.html)
+ * [React devtools](https://github.com/facebook/react-devtools)
