@@ -39,16 +39,18 @@ const compile = (req, res, next) => {
 const doesExport = (req, res, next) => {
   const filename = path.join(root, './exercises/', `./${req.query.slug}/index.js`);
 
-  babel.transformFile(filename, babelConfig, (err, {
-    ast: {
-      program: {
-        body
-      }
-    }
-  }) => {
+  babel.transformFile(filename, babelConfig, (err, transformed) => {
     if (err) {
       return next(err);
     }
+
+    const {
+      ast: {
+        program: {
+          body
+        }
+      }
+    } = transformed;
 
     if (!Array.isArray(body) || !body.length) {
       return res.send({
