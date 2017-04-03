@@ -2,8 +2,9 @@ import React from 'react';
 
 class Guest extends React.Component {
   onRemoveClick() {
-    this.props.onRemove(this.props.name);
+    this.props.onRemove(this.props.id);
   }
+
   render() {
     return (
       <tr>

@@ -5,49 +5,39 @@ import Guest from './Guest.js';
 class GuestList extends React.Component {
   constructor(props) {
     super(props);
+    this.handleText = this.handleText.bind(this);
     this.state = {
-      guestList: props.guestList,
-      guestName: '',
-      guestBrings: ''
+      // guestList: props.guestList,
+      name: '',
+      brings: ''
     };
   }
 
-  changeName(ev) {
+  handleText(ev) {
     this.setState({
-      guestName: ev.target.value
+      [ev.target.id]: ev.target.value
     });
   }
-  changeBrings(ev) {
-    this.setState({
-      guestBrings: ev.target.value
-    });
-  }
+
   addGuest() {
-    this.state.guestList.push({
-      name: this.state.guestName,
-      brings: this.state.guestBrings
-    });
+    const { name, brings } = this.state;
+    this.props.onAdd({name, brings});
 
     this.setState({
-      guestList: this.state.guestList,
       guestName: '',
       guestBrings: ''
     });
   }
-  removeGuest(name) {
-    this.setState({
-      guestList: this.state.guestList.filter(function(guest) {
-        return guest.name !== name;
-      })
-    });
-  }
+
   render() {
-    const guests = this.props.guestList.map(function(guest) {
+    const guests = this.props.guestList.map((guest,index) => {
       return (
         <Guest
           name={guest.name}
           key={guest.name}
-          onRemove={this.removeGuest.bind(this)}>
+          onRemove={this.props.onRemove}
+          id={index}
+        >
             {guest.brings}
         </Guest>
       );
@@ -60,22 +50,22 @@ class GuestList extends React.Component {
             <label>Name</label>
             <input
               value={this.state.guestName}
-              onChange={this.changeName.bind(this)}
+              onChange={this.handleText}
               placeholder='Name'
               type='text'
               className='form-control'
-              id='name'
+              id='guestName'
             />
           </div>
           <div className='form-group'>
             <label>Brings</label>
             <input
               value={this.state.guestBrings}
-              onChange={this.changeBrings.bind(this)}
+              onChange={this.handleText}
               placeholder='Brings'
               type='text'
               className='form-control'
-              id='brings'
+              id='guestBrings'
             />
           </div>
           <div className='form-group'>

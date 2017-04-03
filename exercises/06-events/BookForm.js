@@ -7,16 +7,29 @@ class BookForm extends React.Component {
       title: '',
       read: false
     };
+    this.changeTitle = this.changeTitle.bind(this);
+    this.changeRead = this.changeRead.bind(this);
+    this.addBook = this.addBook.bind(this);
   }
 
   changeTitle(ev) {
     // TODO change the title
+    this.setState({
+      title: ev.target.value
+    });
   }
   changeRead() {
     // TODO change the read value
+    this.setState({
+      read: !this.state.read
+    });
   }
   addBook() {
     // TODO update the parent!
+    this.props.onBook({
+      title: this.state.title,
+      read: this.state.read
+    });
 
     // reset the inputs
     this.setState({
